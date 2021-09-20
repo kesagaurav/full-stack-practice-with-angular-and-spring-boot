@@ -1,0 +1,29 @@
+
+<div class="container">
+    <table class="table table-light">
+        <thead class="thead-light">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>city</th>
+                <th>gender</th>
+                <th>teamName</th>
+                <th>image</th>
+                <th>Delete</th>
+                <th>update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let player of players">
+                <td>{{player.name}}</td>
+                <td>{{player.age}}</td>
+                <td>{{player.city}}</td>
+                <td>{{player.teamName}}</td>
+                <td>{{player.gender}}</td>
+                <td><img class="img-thumbnail" [src]="player.avatar"></td>
+                <td><button type="button" class="btn btn-danger" (click)="deletePlayer(player.id)">delete</button></td>
+                <td><button type="button" class="btn btn-warning" (click)="savePlayer(player)">update</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

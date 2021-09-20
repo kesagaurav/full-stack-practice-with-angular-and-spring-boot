@@ -1,0 +1,30 @@
+
+
+<div class="container-fluid">
+    <h2 style="text-decoration: underline;">update Player</h2>
+    <label>Player Name</label>
+    <input class="form-control" type="text" [(ngModel)]="playerToUpdate.name">
+    <label>Player Age</label>
+    <input class="form-control" type="text" [(ngModel)]="playerToUpdate.age">
+    <label>Player City</label>
+    <input class="form-control" type="text" [(ngModel)]="playerToUpdate.city">
+    <label>Gender</label>
+    <input class="form-control" type="text" [(ngModel)]="playerToUpdate.gender">
+    <label>Player Avatar/Image</label>
+    <input class="form-control" type="text" [(ngModel)]="player.avatar">
+    <label></label>
+    <div class="form-group">
+        <label for="my-select">Select Player Team</label>
+        <select id="my-select" class="form-control" [(ngModel)]="player.teamName">
+            <option value="India">India</option>
+            <option value="Srilanka">Srilanka</option>
+            <option value="Windies">Windies</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Other Country">Other</option>
+        </select>
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-primary" type="button" (click)="savePlayer(player)">update Player</button>
+
+</div>
