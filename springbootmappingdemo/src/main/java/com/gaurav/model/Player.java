@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.Data;
 
 @Data
@@ -30,6 +32,7 @@ public class Player {
 	private String avatar;
 	@OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	@JoinColumn(name="team_fk")
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private Team team;
 
 
